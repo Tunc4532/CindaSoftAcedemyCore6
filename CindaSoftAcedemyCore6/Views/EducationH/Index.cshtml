@@ -1,0 +1,38 @@
+﻿@model List<Education>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+<body>
+
+    <!--//header-->
+    <!-- inner banner -->
+    <div class="inner-banner">
+        <section class="w3l-breadcrumb">
+            <div class="container">
+                <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">Online Eğitimler</h4>
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="/Default/Index/">Anasayfa</a></li>
+                    <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Eğitimler</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <!-- //inner banner -->
+    <!-- banner bottom section -->
+    @await Component.InvokeAsync("_EducationPartial")
+    <!-- //banner bottom section -->
+    <!-- video section -->
+    @await Component.InvokeAsync("_OnlineLessonPartial")
+    <br /><br /><br />
+    <!-- //video section -->
+    <!-- footer -->
+
+    <!-- Js scripts -->
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fa fa-level-up" aria-hidden="true"></span>
+    </button>
+    
+</body>

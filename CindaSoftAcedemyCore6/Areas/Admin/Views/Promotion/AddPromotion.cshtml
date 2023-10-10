@@ -1,0 +1,27 @@
+﻿@model EntityLayer.Concrete.Promotion
+
+@{
+    ViewData["Title"] = "AddPromotion";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3 style="text-align: center">Biz Kimiz Yeni Alan Eklem Sayfası</h3>
+<form method="post">
+    <div>
+        <span class="col-form-label">Başlık</span>
+        <input type="text" asp-for="Header" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Konu</span>
+        <input type="text" asp-for="Tittle" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Açıklama</span>
+        <textarea cols="30" rows="5" asp-for="Description" class="form-control"></textarea>
+    </div>
+    <br />
+    <button class="btn btn-sm btn-outline-success">Ekle</button>
+</form>
+

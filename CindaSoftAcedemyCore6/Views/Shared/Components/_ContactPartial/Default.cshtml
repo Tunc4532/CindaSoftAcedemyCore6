@@ -1,0 +1,31 @@
+﻿@model CindaSoftAcedemyCore6.Models.SendMessageViewModel
+
+<div class="col-lg-6 content-form-right p-0">
+    <div class="form-w3ls p-md-5 p-4">
+        <h4 class="mb-4 sec-title-w3">Bize mesaj gönderin</h4>
+        <form method="post">
+            <div class="form-group">
+                <input class="form-control" type="text" asp-for="NameSurname" placeholder="Adınız Soyadınız" required="" >
+                <span asp-validation-for="NameSurname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="email" asp-for="Mail" placeholder="Mail Adresiniz" required="">
+                <span asp-validation-for="Mail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" asp-for="Subject" placeholder="Konu" required="">
+                <span asp-validation-for="Subject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" asp-for="MessageBody" placeholder="Mesajınız" required=""></textarea>
+                <span asp-validation-for="MessageBody" class="text-danger"></span>
+            </div>
+            <div class="input-group1 text-right">
+                <button class="btn button-style" type="submit">
+                    Gönder
+                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

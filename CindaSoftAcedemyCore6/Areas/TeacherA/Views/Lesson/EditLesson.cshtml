@@ -1,0 +1,52 @@
+﻿@model EntityLayer.Concrete.Education
+
+@{
+    ViewData["Title"] = "EditLesson";
+    Layout = "~/Views/Shared/_TeacherLayout.cshtml";
+}
+
+<h3 style="text-align: center"> Eğitim Güncelleme Paneli</h3>
+<form method="post">
+    <input type="hidden" asp-for="EducationID" class="form-control" />
+    <div>
+        <span class="col-form-label">Eğitim Adı</span>
+        <input type="text" asp-for="EdicationName" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Eğitim Kapak Fotorafı</span>
+        <input type="text" asp-for="ImageUrl" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Fiyat</span>
+        <input type="text" asp-for="Time" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Tanıtım Url</span>
+        <input type="text" asp-for="Section" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Eğitim Url</span>
+        <input type="text" asp-for="TeacImageUrl" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Açıklama</span>
+        <textarea cols="30" rows="5" asp-for="Description" class="form-control"></textarea>
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Name</span>
+        <input type="text" asp-for="Name" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">ıd</span>
+        <input type="text" asp-for="AppUserId" class="form-control" />
+    </div>
+    <br />
+    <button class="btn btn-sm btn-outline-success">Eğitim Güncelle</button>
+</form>

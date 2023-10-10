@@ -1,0 +1,192 @@
+﻿<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
+       <h4>ÇindaSoft Academy</h4>
+    </div>
+    <ul class="nav">
+        
+        @await Component.InvokeAsync("_SidebarİmagePartial")
+
+        <li class="nav-item nav-category">
+            <span class="nav-link">Menüler</span>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/Admin/Dashboard/Index/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-speedometer"></i>
+                </span>
+                <span class="menu-title">Dashboard</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <span class="menu-icon">
+                    <i class="mdi mdi-message-draw"></i>
+                </span>
+                <span class="menu-title">Mesajlar</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/ui-features/buttons.html">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-message-text-outline"></i>
+                            </span> Gelen Mesajlar
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/ui-features/dropdowns.html">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-message-reply-text"></i>
+                            </span>Giden Mesajlar
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/ui-features/typography.html">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-message-plus"></i>
+                            </span>Yeni Mesaj
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Admin/AdMessage/SendMesage/">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-message-plus"></i>
+                            </span>Site Gelen Mesajlar
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+                <span class="menu-icon">
+                    <i class="mdi mdi-animation"></i>
+                </span>
+                <span class="menu-title">Paneller</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/TeacherA/Lesson/LessonList/">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-reddit"></i>
+                            </span> Öğretmen Paneli
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Student/ProfileA/Index/">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-eyedropper-variant"></i>
+                            </span> Öğrenci Paneli
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Default/Index/">
+                            <span class="menu-icon">
+                                <i class="mdi mdi-professional-hexagon"></i>
+                            </span> Ana Sayfa
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/Admin/Announcement/Index/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-account-network"></i>
+                </span>
+                <span class="menu-title">Duyurular</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/Admin/Feature/EditFeature/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-playlist-play"></i>
+                </span>
+                <span class="menu-title">Feature</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/Admin/TCourse/Index/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-table-large"></i>
+                </span>
+                <span class="menu-title">Course</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/Admin/About/EditAbout/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-chart-bar"></i>
+                </span>
+                <span class="menu-title">About</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/Admin/Teacher/Index/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-contacts"></i>
+                </span>
+                <span class="menu-title">Teacher</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/Admin/TeacherCommentt/Index/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-security"></i>
+                </span>
+                <span class="menu-title">Teacher Comment</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/Admin/Article/Index/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-file-outline"></i>
+                </span>
+                <span class="menu-title">Article</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/Admin/Welcome/EditWelcome/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-bridge"></i>
+                </span>
+                <span class="menu-title">Welcome</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/Admin/Promotion/Index/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-file-document-box"></i>
+                </span>
+                <span class="menu-title">Promotion</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/Admin/OnlineLesson/EdittOnlineLesson/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-account-network"></i>
+                </span>
+                <span class="menu-title">Online Lesson</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/Admin/User/Index/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-account-switch"></i>
+                </span>
+                <span class="menu-title">Kullanıcılar</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="/Login/LogOut/">
+                <span class="menu-icon">
+                    <i class="mdi mdi-exit-to-app"></i>
+                </span>
+                <span class="menu-title">Çıkış Yap</span>
+            </a>
+        </li>
+    </ul>
+</nav>

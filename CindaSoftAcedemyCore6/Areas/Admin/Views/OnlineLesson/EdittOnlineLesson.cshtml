@@ -1,0 +1,26 @@
+﻿@model EntityLayer.Concrete.OnlineLesson
+@{
+    ViewData["Title"] = "EdittOnlineLesson";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3 style="text-align: center"> Eğitim Tanıtım Paneli</h3>
+<form method="post">
+    <input type="hidden" class="col-form-label" asp-for="OnlineLessonID" />
+    <div>
+        <span class="col-form-label">Video Url</span>
+        <input type="text" asp-for="VideoUrl" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Başlık</span>
+        <input type="text" asp-for="Header" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Açıklama</span>
+        <textarea cols="30" rows="5" asp-for="Description" class="form-control"></textarea>
+    </div>
+    <br />
+    <button class="btn btn-sm btn-outline-success">Güncelle</button>
+</form>

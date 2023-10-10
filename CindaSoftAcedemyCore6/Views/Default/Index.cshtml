@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+<!-- banner section -->
+@await Component.InvokeAsync("_FooterPartial")
+<!-- //banner section -->
+<!-- banner bottom section -->
+@await Component.InvokeAsync("_CoursePartial")
+<!-- //banner bottom section -->
+<!-- middle section -->
+@await Component.InvokeAsync("_AboutPartial")
+<!-- //middle section -->
+<!-- teams 32 block -->
+@await Component.InvokeAsync("_TeacherPartial")
+<!-- //teams 32 block -->
+<!-- testimonials -->
+@await Component.InvokeAsync("_CommentTeacherPartial")
+<!--//testimonials-->
+<!-- blog section -->
+@await Component.InvokeAsync("_ArticlePartial")
+<!-- //blog section -->

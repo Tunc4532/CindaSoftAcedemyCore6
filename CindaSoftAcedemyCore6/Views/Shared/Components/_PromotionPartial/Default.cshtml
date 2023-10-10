@@ -1,0 +1,22 @@
+﻿@model List<Promotion>
+
+<section class="about-block-3 py-5">
+    <div class="grids-w3ovt py-md-4 py-3">
+        <div class="container">
+            <div class="row">
+                @foreach(var item in Model)
+                {
+                <div class="col-md-4 mb-md-0 mb-5">
+                    <div class="bg-color-block-2">
+                        <h6 class="top-grid-text text-uppercase"><label>01.</label>@item.Header</h6>
+                        <h3 class="grid-one-text mt-2 mb-4">@item.Tittle</h3>
+                        <p>
+                           @item.Description
+                        </p>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>

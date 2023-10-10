@@ -1,0 +1,24 @@
+﻿@model EntityLayer.Concrete.Announcement
+@{
+    ViewData["Title"] = "AddAnnouncement";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h3 style="text-align: center"> Yeni Duyuru Ekleme Paneli</h3>
+<form method="post">
+    <div>
+        <span class="col-form-label">Başlık</span>
+        <input type="text" asp-for="Subject" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Görsel Url</span>
+        <input type="text" asp-for="Image" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Duyuru</span>
+        <textarea cols="30" rows="5" asp-for="Description" class="form-control"></textarea>
+    </div>
+    <br />
+    <button class="btn btn-sm btn-outline-success">Ekle</button>
+</form>

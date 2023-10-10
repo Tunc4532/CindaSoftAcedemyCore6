@@ -1,0 +1,45 @@
+﻿@model List<Announcement>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Duyuru Listesi </h4>
+            <p class="card-description">
+                Düzenleme <code>.Duyurular</code>
+            </p>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th> # </th>
+                            <th> Resim</th>
+                            <th> Konu </th>
+                            <th> Sil </th>
+                            <th> Güncelle </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.AnnouncementId</td>
+                                <td class="py-1">
+                                    <img src="@item.Image" alt="image" />
+                                </td>
+                                <td> @item.Subject </td>
+                                <td><a href="/Admin/Announcement/DeleteAnnouncement/@item.AnnouncementId" class="btn btn-outline-danger">Sil</a></td>
+                                <td><a href="/Admin/Announcement/EditAnnouncement/@item.AnnouncementId" class="btn btn-outline-warning">Güncelle</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <br />
+                <a href="/Admin/Announcement/AddAnnouncement/" class="btn btn-outline-info">Yeni Duyuru Ekle</a>
+            </div>
+        </div>
+    </div>
+</div>

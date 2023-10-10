@@ -1,0 +1,30 @@
+﻿@model EntityLayer.Concrete.CommentTeacher
+@{
+    ViewData["Title"] = "AddTeacherComment";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3 style="text-align: center"> Yorum Ekleme Paneli</h3>
+<form method="post">
+    <div>
+        <span class="col-form-label">İsim</span>
+        <input type="text" asp-for="Name" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Şehir</span>
+        <input type="text" asp-for="City" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Açıklama</span>
+        <textarea cols="30" rows="5" class="form-control" asp-for="Description"></textarea>
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Fotoğraf Url</span>
+        <input type="text" asp-for="ImageUrl" class="form-control" />
+    </div>
+    <br />
+    <button class="btn btn-sm btn-outline-success">Ekle</button>
+</form>

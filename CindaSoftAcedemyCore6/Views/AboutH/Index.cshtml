@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+<body>
+
+    <div class="inner-banner">
+        <section class="w3l-breadcrumb">
+            <div class="container">
+                <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">Hakkımızda</h4>
+                <ul class="breadcrumbs-custom-path">
+                    <li><a href="/Default/Index/">Anasayfa</a></li>
+                    <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Hakkımızda</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    @await Component.InvokeAsync("_WelcomePartial")
+
+    @await Component.InvokeAsync("_PromotionPartial")
+
+    @await Component.InvokeAsync("_StatisticsPartial")
+
+    @await Component.InvokeAsync("_OnlineLessonPartial")
+
+    @await Component.InvokeAsync("_CommentTeacherPartial")
+
+    @await Component.InvokeAsync("_TeacherPartial")
+
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fa fa-level-up" aria-hidden="true"></span>
+    </button>
+</body>
+
+<script src="~/AcademyStar/assets/js/jquery-3.3.1.min.js"></script>
+<script src="~/AcademyStar/assets/js/counter.js"></script>

@@ -1,0 +1,26 @@
+﻿@model EntityLayer.Concrete.Teacher
+@{
+    ViewData["Title"] = "EditTeacher";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3 style="text-align: center"> Öğretmenlerimiz Güncelleme Paneli</h3>
+<form method="post">
+    <input type="hidden" class="col-form-label" asp-for="TeacherID" />
+    <div>
+        <span class="col-form-label">İsim</span>
+        <input type="text" asp-for="Name" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Alan</span>
+        <input type="text" asp-for="Section" class="form-control" />
+    </div>
+    <br />
+    <div> 
+        <span class="col-form-label">Fotoğraf Url</span>
+        <input type="text" asp-for="ImageUrl" class="form-control" />
+    </div>
+    <br />
+    <button class="btn btn-sm btn-outline-success">Güncelle</button>
+</form>

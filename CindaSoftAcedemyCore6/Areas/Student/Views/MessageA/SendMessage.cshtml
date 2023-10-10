@@ -1,0 +1,22 @@
+﻿@model EntityLayer.Concrete.WriterMesssage
+@{
+    ViewData["Title"] = "SendMessage";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<h3 style="text-align:center"><b>Yeni Mesaj Gönderme Sayfasına Hoşgeldiniz</b></h3>
+
+<form class="form-group" method="post">
+
+    <span class="col-form-label">Alıcı Mail</span>
+    <input type="text" asp-for="Receiver" class="form-control" />
+    <br />
+    <span class="col-form-label">Konu</span>
+    <input type="text" asp-for="Subject" class="form-control" />
+    <br />
+    <span class="col-form-label">Mesaj</span>
+    <textarea cols="30" rows="5" asp-for="MessageContent" class="form-control"></textarea>
+    <br />
+    <button class="btn btn-outline-primary">Gönder</button>
+
+</form>

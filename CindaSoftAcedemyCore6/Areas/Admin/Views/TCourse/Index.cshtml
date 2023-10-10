@@ -1,0 +1,49 @@
+﻿@model List<Course>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Kurs Kataori </h4>
+            <p class="card-description">
+                Düzenleme <code>.Katagori</code>
+            </p>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th> # </th>
+                            <th> İkon</th>
+                            <th> Başlık </th>
+                            <th> Açıklama </th>
+                            <th> Sil </th>
+                            <th> Güncelle </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                        <tr>
+                            <td>@item.CourseID</td>
+                            <td class="py-1">
+                                <img src="@item.IconUrl" alt="image" />
+                            </td>
+                            <td> @item.Tittle </td>
+                            <td> @item.Description </td>
+                                <td><a href="/Admin/TCourse/DeleteCourse/@item.CourseID" class="btn btn-outline-danger">Sil</a></td>
+                                <td><a href="/Admin/TCourse/UpdateCourse/@item.CourseID" class="btn btn-outline-warning">Güncelle</a></td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+                <br />
+                <a href="/Admin/TCourse/AddCourse/" class="btn btn-outline-info">Yeni Ekle</a>
+            </div>
+        </div>
+    </div>
+</div>
+

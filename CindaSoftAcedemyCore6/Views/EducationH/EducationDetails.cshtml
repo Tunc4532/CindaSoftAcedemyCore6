@@ -1,0 +1,71 @@
+﻿@model EntityLayer.Concrete.Education
+
+@{
+    ViewData["Title"] = "EducationDetails";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+<div class="inner-banner">
+    <section class="w3l-breadcrumb">
+        <div class="container">
+            <h4 class="inner-text-title font-weight-bold mb-sm-3 mb-2">Eğitim Detayları</h4>
+            <ul class="breadcrumbs-custom-path">
+                <li><a href="/Default/Index/">Anasayfa</a></li>
+                <li class="active"><span class="fa fa-chevron-right mx-2" aria-hidden="true"></span>Detaylar</li>
+            </ul>
+        </div>
+    </section>
+</div>
+
+<section class="video-section">
+    <div class="midd-w3 py-5">
+        <div class="container">
+            <div class="row mb-lg-2">
+                <div class="col-lg-6 about-right-faq align-self pl-lg-5">
+                    <h5 class="title-big">Eğitmen: @Model.Name<br /><br /></h5>
+                    <h5 class="title-big">
+                        Açıklama: @Model.EdicationName<br /><br />
+                        Fiyat: Free<br /><br />
+                        Ömür boyu erişim:<span> &#x2611;</span><br /><br />
+                        @*20 Gün içinde para iadesi:<span> &#x2611;</span><br /><br />*@
+                        Bitirme sertifikası:<span> &#x2611;</span>
+                    </h5>
+                    <a href="/Student/ATMCard/Cardinformation/@Model.EducationID" class="btn button-style mt-sm-5 mt-4">
+                        Şeffaflık<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    </a>
+                    <a href="/Student/Account/Payment/" class="btn button-style mt-sm-5 mt-4">
+                        Katgıda Bulun<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    </a>
+                    <a href="/Student/MyLesson/Index/" class="btn button-style mt-sm-5 mt-4">
+                        Ücretsiz Alın<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    </a>
+                   @* <a class="btn button-style mt-lg-5 mt-4 popup-with-zoom-anim play-view" href="#small-dialog">
+                     Satın Al<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                    </a>*@
+                </div>
+                <div class="col-lg-6 left-wthree-img-video text-righ pr-lg-5 mt-lg-0 mt-5">
+                    <div class="position-relative text-center">
+                        <img src="@Model.ImageUrl" alt="" class="img-fluid radius-image-full">
+                        <a href="#small-dialog"
+                           class="popup-with-zoom-anim play-view text-center position-absolute">
+                            <span class="video-play-icon">
+                                <span class="fa fa-play"></span>
+                            </span>
+                        </a>
+                        <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+                        <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+                            <iframe width="560" height="315" src="@Model.Section"
+                                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                               encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                           </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br />
+<br />
+<br />
+
+

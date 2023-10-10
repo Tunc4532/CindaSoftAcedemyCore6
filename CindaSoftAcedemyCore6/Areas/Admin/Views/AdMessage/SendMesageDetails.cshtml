@@ -1,0 +1,25 @@
+﻿@model EntityLayer.Concrete.Contact
+@{
+    ViewData["Title"] = "SendMesageDetails";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3 style="text-align: center"> Öne Çıkan Güncelleme Paneli</h3>
+<form >
+    <input type="hidden" class="col-form-label" asp-for="ContactID" />
+    <div>
+        <span class="col-form-label">Gönderen</span>
+        <input type="text" asp-for="NameSurname" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Konu</span>
+        <input type="text" asp-for="Subject" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Mesaj</span>
+        <textarea cols="30" rows="5" asp-for="MessageBody" class="form-control"></textarea>
+    </div>
+    <br />
+</form>

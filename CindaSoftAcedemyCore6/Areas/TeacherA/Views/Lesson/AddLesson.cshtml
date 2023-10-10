@@ -1,0 +1,43 @@
+﻿@model EntityLayer.Concrete.Education
+
+@{
+    ViewData["Title"] = "AddLesson";
+    Layout = "~/Views/Shared/_TeacherLayout.cshtml";
+}
+
+
+<h3 style="text-align: center">Yeni Eğitim Oluşturma Sayfası</h3>
+<form method="post">
+
+    <div>
+        <span class="col-form-label">Eğitim Adı</span>
+        <input type="text" name="EdicationName" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Eğitim Kapak Fotorafı</span>
+        <input type="text"  name="ImageUrl" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Talep Edilen Tutar</span>
+        <input type="text" name="Time" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Tanıtım Url</span>
+        <input type="text" name="Section" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Eğitim Url</span>
+        <input type="text" name="TeacImageUrl" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Açıklama</span>
+        <textarea cols="30" rows="5" name="Description" class="form-control"></textarea>
+    </div>
+    <br />
+    <button class="btn btn-sm btn-outline-success">Eğitim Ekle</button>
+</form>

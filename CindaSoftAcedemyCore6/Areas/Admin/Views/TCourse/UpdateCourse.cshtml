@@ -1,0 +1,27 @@
+﻿@model EntityLayer.Concrete.Course
+
+@{
+    ViewData["Title"] = "UpdateCourse";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3 style="text-align: center"> Eğitim Güncelleme Paneli</h3>
+<form method="post">
+    <input type="hidden" class="col-form-label" asp-for="CourseID" />
+    <div>
+        <span class="col-form-label">İkon</span>
+        <input type="text" asp-for="IconUrl" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Açıklama</span>
+        <textarea cols="30" rows="5" class="form-control" asp-for="Description"></textarea>
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Başlık</span>
+        <input type="text" asp-for="Tittle" class="form-control" />
+    </div>
+    <br />
+    <button class="btn btn-sm btn-outline-success">Güncelle</button>
+</form>

@@ -1,0 +1,23 @@
+﻿@model EntityLayer.Concrete.WriterMesssage
+@{
+    ViewData["Title"] = "ReceiverMessageDetails";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+<h3>gelen mesajlar</h3>
+<form >
+    <div class="modal-body">
+        <input type="hidden" class="col-form-label" asp-for="WriterMesssageID" />
+        <br />
+        <span class="col-form-label">Mesaj Gönderen</span>
+        <input type="text" asp-for="SenderName" class="form-control" />
+        <br />
+        <span class="col-form-label">Gönderen Mail</span>
+        <input type="text" asp-for="Sender" class="form-control" />
+        <br />
+        <span class="col-form-label">Mesaj</span>
+        <textarea cols="30" rows="5" asp-for="MessageContent" class="form-control"></textarea>
+        <br />
+        <a type="button" class="btn btn-warning" data-dismiss="modal" href="/User/UMessage/SenderMessage/">Cevapla</a>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Geri</button>
+    </div>
+</form>

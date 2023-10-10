@@ -1,0 +1,10 @@
+﻿@model EntityLayer.Concrete.Lesson
+@{
+    ViewData["Title"] = "WatchLesson";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+
+<iframe width="1190" height="515" src="@Model.LessUrl"
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;
+    web-share" allowfullscreen></iframe>

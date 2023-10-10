@@ -1,0 +1,39 @@
+﻿@using EntityLayer.Concrete
+@model List<About>
+
+<section class="w3l-servicesblock py-md-5 py-4">
+    <div class="container pb-2">
+        @foreach(var item in Model)
+        {
+        <div class="row align-items-center">
+            <div class="col-lg-6 left-wthree-img pr-lg-4">
+                <img src="@item.ImageUrl" alt="" class="img-fluid">
+            </div>
+            <div class="col-lg-6 about-right-faq align-self mb-lg-0 mb-5 pl-xl-5">
+                <h6>Hakkımızda</h6>
+                <h3 class="title-big mb-3">@item.Tittle</h3>
+                <p class="">
+                  @item.Description
+                </p>
+                <div class="row mt-lg-5 mt-4 mb-2">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center left-insp-art">
+                            <img src="~/AcademyStar/assets/images/book.png" alt="" class="img-fluid mr-3">
+                            <h6>BECERILERINIZI GELIŞTIRIN</h6>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 mt-sm-0 mt-4">
+                        <div class="d-flex align-items-center left-insp-art">
+                            <img src="~/AcademyStar/assets/images/book2.png" alt="" class="img-fluid mr-3">
+                            <h6>ONLINE ÖĞRENMEYE BAŞLAYIN</h6>
+                        </div>
+                    </div>
+                </div>
+                <a class="btn button-style button-2 mt-lg-5 mt-4" href="#">
+                    Devamını Oku<i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+        }
+    </div>
+</section>

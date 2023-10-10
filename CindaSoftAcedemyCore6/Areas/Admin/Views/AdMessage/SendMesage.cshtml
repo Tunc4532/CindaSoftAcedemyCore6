@@ -1,0 +1,42 @@
+﻿@model List<Contact>
+@{
+    ViewData["Title"] = "SendMesage";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Sayfadan Gelen Mesajlar</h4>
+            <p class="card-description">
+                Mesajlar <code>.Detaylar</code>
+            </p>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Gönderen</th>
+                            <th>Konu</th>
+                            <th>Tarih</th>
+                            <th>Detylar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        { 
+                            <tr> 
+                                <th>@item.ContactID</th>
+                                <th>@item.NameSurname</th>
+                                <td>@item.Subject</td>
+                                <td>@(((DateTime)item.Date).ToString("dd-MMM-yyyy"))</td>
+                                <td><a href="/Admin/AdMessage/SendMesageDetails/@item.ContactID" class="btn btn-outline-warning">Görüntüle</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

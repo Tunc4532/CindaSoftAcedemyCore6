@@ -1,0 +1,17 @@
+﻿@model EntityLayer.Concrete.Announcement
+@{
+    ViewData["Title"] = "AnnouncementDetails";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+<br />
+<br />
+<img src="@Model.Image" alt="image" style="height:200px;width:200px" />
+<br />
+<br />
+<br />
+<input type="text" asp-for="Subject" class="form-control" />
+<br />
+<textarea cols="30" rows="5" asp-for="Description" class="form-control"></textarea>
+<br />
+
+

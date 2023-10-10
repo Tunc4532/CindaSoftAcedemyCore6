@@ -1,0 +1,30 @@
+﻿@model EntityLayer.Concrete.Article
+@{
+    ViewData["Title"] = "AddArticle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h3 style="text-align: center"> Makale Ekleme Paneli</h3>
+<form method="post">
+    <div>
+        <span class="col-form-label">Fotoğraf Url</span>
+        <input type="text" asp-for="ImageUrl" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Tarih</span>
+        <input type="text" asp-for="Date" class="form-control" />
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Açıklama</span>
+        <textarea cols="30" rows="5" class="form-control" asp-for="Description"></textarea>
+    </div>
+    <br />
+    <div>
+        <span class="col-form-label">Başlık</span>
+        <input type="text" asp-for="Subject" class="form-control" />
+    </div>
+    <br />
+    <button class="btn btn-sm btn-outline-success">Ekle</button>
+</form>
+

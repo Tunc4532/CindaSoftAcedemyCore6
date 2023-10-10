@@ -1,0 +1,19 @@
+﻿@model AccountViewModel
+@{
+    ViewData["Title"] = "Payment";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+<form method="post">
+
+    <label>Gönderen</label>
+    <input type="text" asp-for="SenderId" class="form-control" />
+    <br />
+    <label>Alıcı</label>
+    <input type="text" asp-for="ReceiverId" class="form-control" placeholder="2" />
+    <br />
+    <label>Miktar</label>
+    <input type="text" asp-for="Amount" class="form-control" />
+    <br />
+    <button class="btn btn-outline-info">Ödeme Yap</button>
+</form>
+

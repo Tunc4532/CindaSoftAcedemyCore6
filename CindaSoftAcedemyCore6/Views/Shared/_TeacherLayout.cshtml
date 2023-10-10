@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Html.PartialAsync("/Views/TeacLayoutPartial/_HeaderPartial.cshtml")
+
+<body class="g-sidenav-show  bg-gray-100">
+    
+    @await Html.PartialAsync("/Views/TeacLayoutPartial/_SidebarPartial.cshtml")
+
+    <main class="main-content position-relative max-height-vh-100 h-100 mt-1 border-radius-lg ">
+
+        @await Html.PartialAsync("/Views/TeacLayoutPartial/_NavbarPartial.cshtml")
+
+        <div class="container-fluid py-4">
+
+            @await Html.PartialAsync("/Views/TeacLayoutPartial/_StatisticPartial.cshtml")
+
+            @RenderBody()
+
+            @await Html.PartialAsync("/Views/TeacLayoutPartial/_FooterPartial.cshtml")
+
+        </div>
+    </main>
+
+    @await Html.PartialAsync("/Views/TeacLayoutPartial/_ScriptPartial.cshtml")
+
+</body>
+
+</html>

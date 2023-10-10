@@ -1,0 +1,120 @@
+﻿@model EntityLayer.Concrete.Education
+
+@{
+    ViewData["Title"] = "Cardinformation";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<body class="g-sidenav-show   bg-gray-100">
+    <div class="min-height-300 bg-primary position-absolute w-100"></div>
+    <main class="main-content position-relative border-radius-lg ">
+        <div class="container-fluid py-4">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-xl-6 mb-xl-0 mb-4">
+                            <div class="card bg-transparent shadow-xl">
+                                <div class="overflow-hidden position-relative border-radius-xl" style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/card-visa.jpg');">
+                                    <span class="mask bg-gradient-dark"></span>
+                                    <div class="card-body position-relative z-index-1 p-3">
+                                        <i class="fas fa-wifi text-white p-2"></i>
+                                        <h5 class="text-white mt-4 mb-5 pb-2">4562&nbsp;&nbsp;&nbsp;1122&nbsp;&nbsp;&nbsp;4594&nbsp;&nbsp;&nbsp;7852</h5>
+                                        <div class="d-flex">
+                                            <div class="d-flex">
+                                                <div class="me-4">
+                                                    <p class="text-white text-sm opacity-8 mb-0">Kart Sahibi</p>
+                                                    <h6 class="text-white mb-0">Tunç Çindaş</h6>
+                                                </div>
+                                                <div>
+                                                    <p class="text-white text-sm opacity-8 mb-0">CVC2</p>
+                                                    <h6 class="text-white mb-0">333</h6>
+                                                </div>
+                                            </div>
+                                            <div class="ms-auto w-20 d-flex align-items-end justify-content-end">
+                                                <img class="w-60 mt-2" src="~/dashboardmaster1/assets/img/logos/mastercard.png" alt="logo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="card">
+                                        <div class="card-header mx-4 p-3 text-center">
+                                            <div class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
+                                                <i class="fas fa-landmark opacity-10"></i>
+                                            </div>
+                                        </div>
+                                        <div class="card-body pt-0 p-3 text-center">
+                                            <h6 class="text-center mb-0">Toplanan Miktar</h6>
+                                            <span class="text-xs">Kurumlara bağışlanan net katgı ücretleri</span>
+                                            <hr class="horizontal dark my-3">
+                                            <h5 class="mb-0">+8000.00 ₺</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mt-md-0 mt-4">
+                                    <div class="card">
+                                        <div class="card-header mx-4 p-3 text-center">
+                                            <div class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
+                                                <a href="#">
+                                                    <img src="@Model.ImageUrl" class="icon icon-shape icon-lg bg-gradient-primary shadow text-center border-radius-lg">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-body pt-0 p-3 text-center">
+                                            <h6 class="text-center mb-0">Katgı Değeri</h6>
+                                            <span class="text-xs">@Model.Description</span>
+                                            <hr class="horizontal dark my-3">
+                                            <h5 class="mb-0">@Model.Time.00 TL</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-lg-0 mb-4">
+                            <div class="card mt-4">
+                                <div class="card-header pb-0 p-3">
+                                    <div class="row">
+                                        <div class="col-6 d-flex align-items-center">
+                                            <h6 class="mb-0">Kart Bilgileriniz</h6>
+                                        </div>
+                                        <div class="col-6 text-end">
+                                            <a class="btn bg-gradient-dark mb-0" href="/Student/Account/Payment/"><i class="fas fa-plus"></i>&nbsp;&nbsp;Ödeme Yap</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body p-3">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-md-0 mb-4">
+                                            <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
+                                                <img class="w-10 me-3 mb-0" src="~/dashboardmaster1/assets/img/logos/mastercard.png" alt="logo">
+                                                <h6 class="mb-0">****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;7852</h6>
+                                                <i class="fas fa-pencil-alt ms-auto text-dark cursor-pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="Hesap No"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
+                                                <img class="w-10 me-3 mb-0" src="~/dashboardmaster1/assets/img/logos/visa.png" alt="logo">
+                                                <h6 class="mb-0">****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;5248</h6>
+                                                <i class="fas fa-pencil-alt ms-auto text-dark cursor-pointer" data-bs-toggle="tooltip" data-bs-placement="top" title="Hesap No"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                @await Component.InvokeAsync("_LessonComment")
+
+            </div>
+        </div>
+    </main>
+
+
+</body>

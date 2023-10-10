@@ -1,0 +1,48 @@
+﻿@model List<Article>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Makalelerimiz </h4>
+            <p class="card-description">
+                Düzenleme <code>.Makale</code>
+            </p>
+            <div class="table-responsive"> 
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th> # </th>
+                            <th> Fotoğraf</th>
+                            <th> Tarih </th>
+                            <th> Başlık </th>
+                            <th> Sil </th>
+                            <th> Güncelle </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.ArticleID</td>
+                                <td class="py-1">
+                                    <img src="@item.ImageUrl" alt="image" />
+                                </td>
+                                <td> @item.Date </td>
+                                <td> @item.Subject </td>
+                                <td><a href="/Admin/Article/DeleteArticle/@item.ArticleID" class="btn btn-outline-danger">Sil</a></td>
+                                <td><a href="/Admin/Article/EditArticle/@item.ArticleID" class="btn btn-outline-warning">Güncelle</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <br />
+                <a href="/Admin/Article/AddArticle/" class="btn btn-outline-info">Yeni Ekle</a>
+            </div>
+        </div>
+    </div>
+</div>

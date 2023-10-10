@@ -1,0 +1,52 @@
+﻿@model List<Education>
+
+<div class="w3l-index-block4 py-md-5 py-4">
+    <div class="features-bg py-lg-4">
+        <div class="container">
+            <div class="row">
+                @foreach(var item in Model)
+                {
+                <div class="col-lg-4 col-md-6 features15-col-text">
+                        <a href="/EducationH/EducationDetails/@item.EducationID" class="d-flex feature-unit align-items-center">
+                        <div class="col-5">
+                            <div class="features15-info">
+                                <img class="img-fluid" src="@item.ImageUrl" style="height:100px;width:360px" alt=" ">
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="features15-para">
+                                <h6>Fiyat:Free</h6>
+                                <h5>Ders:@item.EdicationName</h5>
+                                <p>Eğitmen:@item.Name @item.AppUser.SurName</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                }
+            </div>
+            <!-- pagination -->
+            <div class="pagination-style">
+                <ul>
+                    <li>
+                        <a href="#none" class="not-allowed" disabled="">
+                            <span class="fa fa-angle-double-left" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    <li><a class="active" href="#page">1</a></li>
+                    <li>
+                        <a href="#page">2</a>
+                    </li>
+                    <li>
+                        <a href="#page">3</a>
+                    </li>
+                    <li>
+                        <a href="#page">
+                            <span class="fa fa-angle-double-right" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- //pagination -->
+        </div>
+    </div>
+</div>
