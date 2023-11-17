@@ -21,6 +21,9 @@ or you can log in as a student and benefit from free trainings or send money to 
 + Authentication<br/>
 + DTO Layer
 
+
+[Linkedln](https://www.linkedin.com/feed/update/urn:li:activity:7130858214421663744/)
+
 ## Images <br/>
 ![Ekran görüntüsü 2023-11-18 000814](https://github.com/Tunc4532/CindaSoftAcedemyCore6/assets/121084967/8e23c6f4-6850-4b68-8ed6-d0863e5cd6d0)
 ![Ekran görüntüsü 2023-11-18 001013](https://github.com/Tunc4532/CindaSoftAcedemyCore6/assets/121084967/ac4fd6d1-e1c9-48f5-b22a-0838f74365ea)
